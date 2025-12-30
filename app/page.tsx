@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
+import Link from "next/link";
 import {
   ArrowUpRight,
   Github,
@@ -15,34 +16,43 @@ import {
   Globe,
   Users,
   TrendingUp,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
         <div className="absolute top-[20%] -right-[10%] w-[30%] h-[50%] bg-primary/10 rounded-full blur-[120px]" />
       </div>
 
-      {/* Navigation Bar */}
       <nav className="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-primary-foreground">
             N
           </div>
-          <span className="font-heading font-bold text-lg tracking-tight">NIKHIL_500</span>
+          <span className="font-heading font-bold text-lg tracking-tight">
+            NIKHIL
+          </span>
         </div>
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#strategies" className="hover:text-foreground transition-colors">
+            <a
+              href="#strategies"
+              className="hover:text-foreground transition-colors"
+            >
               Strategies
             </a>
-            <a href="#community" className="hover:text-foreground transition-colors">
+            <a
+              href="#community"
+              className="hover:text-foreground transition-colors"
+            >
               Community
             </a>
-            <a href="#education" className="hover:text-foreground transition-colors">
+            <a
+              href="#education"
+              className="hover:text-foreground transition-colors"
+            >
               Education
             </a>
           </div>
@@ -54,7 +64,6 @@ export default function Home() {
       </nav>
 
       <main className="container mx-auto px-6 pt-32 pb-24 relative z-10">
-        {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -82,8 +91,9 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10"
           >
-            Bridging high-performance athletics with high-stakes finance. I simplify complex market structures to help
-            you trade with institutional precision.
+            Bridging high-performance athletics with high-stakes finance. I
+            simplify complex market structures to help you trade with
+            institutional precision.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -91,9 +101,19 @@ export default function Home() {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Button size="lg" className="rounded-full px-8 h-14 text-base shadow-lg">
-              Access Free Community <ArrowUpRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link
+              href="https://t.co/oEXODRY6g1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="rounded-full px-8 h-14 text-base shadow-lg"
+              >
+                Access Free Community
+                <ArrowUpRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
@@ -104,7 +124,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-32">
           {[
             { icon: Users, label: "Community Members", value: "7,200+" },
@@ -120,15 +139,18 @@ export default function Home() {
               className="glass p-8 rounded-3xl group hover:border-primary/50 transition-colors"
             >
               <stat.icon className="h-6 w-6 text-primary mb-4" />
-              <div className="text-3xl font-heading font-bold mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-widest font-bold">{stat.label}</div>
+              <div className="text-3xl font-heading font-bold mb-1">
+                {stat.value}
+              </div>
+              <div className="text-sm text-muted-foreground uppercase tracking-widest font-bold">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-24">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
-            {/* Left Sidebar (Sticky) */}
             <header className="lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)] flex flex-col justify-between lg:w-1/3">
               <div>
                 <motion.div
@@ -136,39 +158,62 @@ export default function Home() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h1 className="text-4xl lg:text-5xl font-heading font-bold tracking-tight mb-2">Nikhil</h1>
-                  <h2 className="text-xl font-medium text-foreground/80 mb-6">Financial Trader & Educator</h2>
+                  <h1 className="text-4xl lg:text-5xl font-heading font-bold tracking-tight mb-2">
+                    Nikhil
+                  </h1>
+                  <h2 className="text-xl font-medium text-foreground/80 mb-6">
+                    Financial Trader & Educator
+                  </h2>
                   <p className="text-muted-foreground leading-relaxed max-w-xs mb-8">
-                    I simplify institutional market structure for retail traders, bridging high-performance athletics
-                    with high-stakes finance.
+                    I simplify institutional market structure for retail
+                    traders, bridging high-performance athletics with
+                    high-stakes finance.
                   </p>
                 </motion.div>
 
                 <nav className="hidden lg:block space-y-4">
-                  {["About", "Framework", "Platforms", "Contact"].map((item) => (
-                    <a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
-                      className="group flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all"
-                    >
-                      <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-foreground transition-all" />
-                      {item}
-                    </a>
-                  ))}
+                  {["About", "Framework", "Platforms", "Contact"].map(
+                    (item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className="group flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all"
+                      >
+                        <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-foreground transition-all" />
+                        {item}
+                      </a>
+                    )
+                  )}
                 </nav>
               </div>
 
               <div className="flex items-center gap-6 mt-12 lg:mt-0">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="#"
+                  aria-label="github"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="#"
+                  aria-label="twitter"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="#"
+                  aria-label="youtube"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="#"
+                  aria-label="send"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Send className="w-5 h-5" />
                 </a>
                 <div className="ml-auto">
@@ -177,25 +222,36 @@ export default function Home() {
               </div>
             </header>
 
-            {/* Right Content Area (Scrollable) */}
             <main className="lg:w-2/3 space-y-32">
-              {/* About Section */}
               <section id="about" className="scroll-mt-24">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm a trader passionate about market psychology and precision execution. My approach is rooted in
-                  <span className="text-foreground font-medium"> institutional order flow</span>, a perspective gained
-                  from years of studying how the biggest players move capital.
+                  I'm a trader passionate about market psychology and precision
+                  execution. My approach is rooted in
+                  <span className="text-foreground font-medium">
+                    {" "}
+                    institutional order flow
+                  </span>
+                  , a perspective gained from years of studying how the biggest
+                  players move capital.
                 </p>
                 <br />
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Currently, I lead a community of <span className="text-foreground font-medium">7k+ members</span> at
-                  <span className="text-foreground font-medium"> NIKHIL_500</span>, focusing on transparency and
-                  sustainable growth. In the past, I've transitioned from professional athletics to finance, bringing
-                  the same level of rigor and discipline to the charts.
+                  Currently, I lead a community of{" "}
+                  <span className="text-foreground font-medium">
+                    7k+ members
+                  </span>{" "}
+                  at
+                  <span className="text-foreground font-medium">
+                    {" "}
+                    NIKHIL_500
+                  </span>
+                  , focusing on transparency and sustainable growth. In the
+                  past, I've transitioned from professional athletics to
+                  finance, bringing the same level of rigor and discipline to
+                  the charts.
                 </p>
               </section>
 
-              {/* Framework Section */}
               <section id="framework" className="scroll-mt-24">
                 <h3 className="text-sm font-bold uppercase tracking-[0.2em] mb-12 text-foreground/50 lg:hidden">
                   Framework
@@ -239,7 +295,9 @@ export default function Home() {
                             </h4>
                             <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-all" />
                           </div>
-                          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{item.desc}</p>
+                          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                            {item.desc}
+                          </p>
                           <div className="flex gap-2">
                             {item.tags.map((tag) => (
                               <span
@@ -257,24 +315,41 @@ export default function Home() {
                 </div>
               </section>
 
-              {/* Platforms Section */}
               <section id="platforms" className="scroll-mt-24">
                 <h3 className="text-sm font-bold uppercase tracking-[0.2em] mb-12 text-foreground/50 lg:hidden">
                   Platforms
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { label: "Telegram Community", sub: "7.2k+ Members", icon: Send },
-                    { label: "YouTube Academy", sub: "Weekly Lessons", icon: Youtube },
-                    { label: "X / Twitter", sub: "Market Updates", icon: Twitter },
-                    { label: "Global Network", sub: "24/7 Coverage", icon: Globe },
+                    {
+                      label: "Telegram Community",
+                      sub: "7.2k+ Members",
+                      icon: Send,
+                    },
+                    {
+                      label: "YouTube Academy",
+                      sub: "Weekly Lessons",
+                      icon: Youtube,
+                    },
+                    {
+                      label: "X / Twitter",
+                      sub: "Market Updates",
+                      icon: Twitter,
+                    },
+                    {
+                      label: "Global Network",
+                      sub: "24/7 Coverage",
+                      icon: Globe,
+                    },
                   ].map((platform) => (
                     <div
                       key={platform.label}
                       className="p-8 rounded-2xl border border-border/50 bg-card hover:border-primary/50 transition-colors group"
                     >
                       <platform.icon className="w-6 h-6 mb-6 text-muted-foreground group-hover:text-primary transition-colors" />
-                      <div className="font-bold text-lg mb-1">{platform.label}</div>
+                      <div className="font-bold text-lg mb-1">
+                        {platform.label}
+                      </div>
                       <div className="text-xs text-muted-foreground uppercase tracking-widest font-bold">
                         {platform.sub}
                       </div>
@@ -283,14 +358,19 @@ export default function Home() {
                 </div>
               </section>
 
-              {/* Contact CTA */}
               <section id="contact" className="pb-24">
                 <div className="p-12 rounded-3xl bg-foreground text-background text-center">
-                  <h3 className="text-3xl font-heading font-bold mb-6">Ready to trade with precision?</h3>
+                  <h3 className="text-3xl font-heading font-bold mb-6">
+                    Ready to trade with precision?
+                  </h3>
                   <p className="text-background/70 mb-8 max-w-md mx-auto">
-                    Join our institutional flow community and start seeing the markets for what they really are.
+                    Join our institutional flow community and start seeing the
+                    markets for what they really are.
                   </p>
-                  <Button size="lg" className="rounded-full bg-background text-foreground hover:bg-background/90 px-8">
+                  <Button
+                    size="lg"
+                    className="rounded-full bg-background text-foreground hover:bg-background/90 px-8"
+                  >
                     Get Started <ArrowUpRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -299,14 +379,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Footer */}
         <footer className="border-t border-border pt-16 pb-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-primary-foreground">
                 N
               </div>
-              <span className="font-heading font-bold text-lg tracking-tight uppercase">NIKHIL_500</span>
+              <span className="font-heading font-bold text-lg tracking-tight uppercase">
+                NIKHIL_500
+              </span>
             </div>
             <div className="flex gap-8 text-sm font-medium text-muted-foreground">
               <a href="#" className="hover:text-foreground">
@@ -324,14 +405,18 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center text-xs text-muted-foreground space-y-4">
-            <p>© 2025 NIKHIL_500. All Rights Reserved. Trading involves significant risk.</p>
+            <p>
+              © 2025 NIKHIL_500. All Rights Reserved. Trading involves
+              significant risk.
+            </p>
             <p className="max-w-3xl mx-auto leading-relaxed opacity-50">
-              Disclaimer: The content provided on this website and associated platforms is for educational purposes
-              only. It is not financial advice. Past performance is not indicative of future results.
+              Disclaimer: The content provided on this website and associated
+              platforms is for educational purposes only. It is not financial
+              advice. Past performance is not indicative of future results.
             </p>
           </div>
         </footer>
       </main>
     </div>
-  )
+  );
 }
